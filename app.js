@@ -9,7 +9,7 @@ const list = document.querySelector("#list")
 
 let renderList = (books) => {
   list.innerHTML = "";
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 4; i++) {
     let el = document.createElement('div')
     el.classList.add('book1');
     el.innerHTML = `<h2>Title: ${books[i].volumeInfo.title}</h1> <h2>Author: ${books[i].volumeInfo.authors[0]}</

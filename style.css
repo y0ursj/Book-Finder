@@ -1,6 +1,6 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
+
+
   margin: 0;
 }
 body {
@@ -8,7 +8,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  margin: auto;
   font-family: 'Josefin Sans', sans-serif;
 }
 .navbar {
@@ -61,6 +60,8 @@ body {
       padding-bottom: 0;
       height: 70px;
       align-items: center;
+      position: fixed;
+      width: 100%;
   }
 
   .main-nav {
@@ -139,15 +140,13 @@ h1 {
    padding: 20px;
  }
 
-#list {
- display: grid;
- grid-gap: 10px;
- grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+.book1 {
+  margin-top: 50px;
+
 }
 
 .footer {
   position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
   background-color: #2376ae;
@@ -157,12 +156,14 @@ h1 {
   padding: 10px;
 }
 
+
 .book1 {
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-right: 10px;
+  margin-bottom: 50px;
   color: #2376ae;
 }
+
