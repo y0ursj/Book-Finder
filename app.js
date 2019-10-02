@@ -12,16 +12,19 @@ let renderList = (books) => {
   for (let i = 0; i < 4; i++) {
     let el = document.createElement('div')
     el.classList.add('book1');
-    el.innerHTML = `<h2>Title: ${books[i].volumeInfo.title}</h1> <h2>Author: ${books[i].volumeInfo.authors[0]}</
-   </h2> <h2>Ratings: ${books[i].volumeInfo.averageRating}</h2><img src=${books[i].volumeInfo.imageLinks.thumbnail}>`
+    el.innerHTML = `<img src=${books[i].volumeInfo.imageLinks.thumbnail}><div class="book-info"><h2>Title: ${books[i].volumeInfo.title}</h2><h3>Author: ${books[i].volumeInfo.authors[0]}</
+   </h3><h4>Reader Ratings: ${books[i].volumeInfo.averageRating}</h4><h5 id="textInfo">${books[i].searchInfo.textSnippet}</h5></div>`
     list.append(el)
   }
 }
 
 button.addEventListener("click", async function () {
   const response = await axios.get(`${BASE_URL}${input.value}${API_Key}`)
+console.log(response.data.items)
   renderList(response.data.items);
 })
+
+
 
 
 
