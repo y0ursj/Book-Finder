@@ -189,4 +189,22 @@ h1 {
   padding: 0px 10px;
 }
 
+/* Media Queries */
+@media (max-width: 500px) {
+#blank {
+  padding: 0;
+}
+
+.search-section {
+  width: 100%;
+}
+
+h4 {
+  display: none;
+}
+
+body {
+  background-repeat: repeat;
+}
+}
 
